@@ -2683,6 +2683,17 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{vvv
 			}
 		}
 	}
+	var bgmusic = document.getElementById('bgmusic');  
+bgmusic.addEventListener('canplay', function(){  
+    this.play();  
+}, false);  
+window.addEventListener('load', function(){  
+    window.addEventListener('touchstart', once, false);  
+}, false);  
+function once(){  
+    bgmusic.play();  
+    window.removeEventListener('touchstart', once, false);  
+}  
 	this.frame_584 = function() {
 		/* 淡入影片剪辑
 		通过在 Tick 事件中增加元件实例的 Alpha 属性值，使其实现淡入，直至其完全显示。
