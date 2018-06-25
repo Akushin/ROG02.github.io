@@ -2549,7 +2549,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{vvv
 
 	// timeline functions:
 	this.frame_0 = function() {
-		playSound("_01_1");
+		playSound("_01_1",-1);
 	}
 	this.frame_199 = function() {
 		/* 淡入影片剪辑
